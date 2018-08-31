@@ -2,7 +2,8 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongodb');
+var mongoose = require('mongoose');
+var mongo = require('mongodb');
 mongoose.connect("mongodb://"+process.env.IP+": /test");
 
 mongoose.connection.on('error', function() {
