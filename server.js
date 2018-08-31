@@ -2,8 +2,8 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-mongoose.connect("mongodb://"+process.env.IP+": 27017/node-cw8");
+var mongoose = require('mongodb');
+mongoose.connect("mongodb://"+process.env.IP+": /test");
 
 mongoose.connection.on('error', function() {
   console.log("Could not connect to mongodb");
